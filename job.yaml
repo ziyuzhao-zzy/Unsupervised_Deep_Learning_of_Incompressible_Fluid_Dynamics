@@ -2,10 +2,10 @@ taskList:
 - taskType: "iginx"
   timeout: 10
   sqlList:
-  - "select * from parm;"
+  - "select * from parm where key = 2;"
 - taskType: "python"
   dataFlowType: "batch"
   timeout: 100000
-  pyTaskName: "train_fluid_model"
+  pyTaskName: "sim_fluid_model"
 exportType: "file"
-exportFile: "/Users/zhaoziyu/IGinX/core/target/iginx-core-0.8.0-SNAPSHOT/udf_funcs/python_scripts/Unsupervised_Deep_Learning_of_Incompressible_Fluid_Dynamics/models.txt"
+exportFile: "/Users/zhaoziyu/IGinX/core/target/iginx-core-0.8.0-SNAPSHOT/udf_funcs/python_scripts/Unsupervised_Deep_Learning_of_Incompressible_Fluid_Dynamics/simres.txt"

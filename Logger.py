@@ -136,8 +136,9 @@ class Logger():
 		:optimizer: optimizer (if list: save multiple optimizers)
 		:index: index of state to save (e.g. specific epoch)
 		"""
-		os.makedirs('Logger/{}/{}/states'.format(self.name,self.datetime),exist_ok=True)
-		path = 'Logger/{}/{}/states/{}.state'.format(self.name,self.datetime,index)
+		#yourpath
+		os.makedirs('/Users/zhaoziyu/IGinX/core/target/iginx-core-0.8.0-SNAPSHOT/udf_funcs/python_scripts/Unsupervised_Deep_Learning_of_Incompressible_Fluid_Dynamics/Logger/{}/{}/states'.format(self.name,self.datetime),exist_ok=True)
+		path = '/Users/zhaoziyu/IGinX/core/target/iginx-core-0.8.0-SNAPSHOT/udf_funcs/python_scripts/Unsupervised_Deep_Learning_of_Incompressible_Fluid_Dynamics/Logger/{}/{}/states/{}.state'.format(self.name,self.datetime,index)
 		state = {}
 		
 		if type(model)is not list:
@@ -151,7 +152,7 @@ class Logger():
 			state.update({'optimizer{}'.format(i):o.state_dict()})
 		
 		torch.save(state, path)
-
+		print(path)
 		return state
 	
 	def save_dict(self,dic,index="final"):
@@ -175,9 +176,8 @@ class Logger():
 		:continue_datetime: flag whether to continue on this run. Default: False
 		:return: datetime, index (helpful, if datetime / index wasn't given)
 		"""
-		
 		if datetime is None:
-			for _,dirs,_ in os.walk('Logger/{}/'.format(self.name)):
+			for _,dirs,_ in os.walk('/Users/zhaoziyu/IGinX/core/target/iginx-core-0.8.0-SNAPSHOT/udf_funcs/python_scripts/Unsupervised_Deep_Learning_of_Incompressible_Fluid_Dynamics/Logger/{}/'.format(self.name)):
 				datetime = sorted(dirs)[-1]
 				if datetime == self.datetime:
 					datetime = sorted(dirs)[-2]
@@ -189,11 +189,11 @@ class Logger():
 			self.datetime = datetime
 		
 		if index is None:
-			for _,_,files in os.walk('Logger/{}/{}/states/'.format(self.name,datetime)):
+			for _,_,files in os.walk('/Users/zhaoziyu/IGinX/core/target/iginx-core-0.8.0-SNAPSHOT/udf_funcs/python_scripts/Unsupervised_Deep_Learning_of_Incompressible_Fluid_Dynamics/Logger/{}/{}/states/'.format(self.name,datetime)):
 				index = os.path.splitext(natsorted(files)[-1])[0]
 				break
 		#yourpath
-		path = '/Users/IGinX/core/target/iginx-core-0.8.0-SNAPSHOT/udf_funcs/python_scripts/Unsupervised_Deep_Learning_of_Incompressible_Fluid_Dynamics/Logger/{}/{}/states/{}.state'.format(self.name,datetime,index)
+		path = '/Users/zhaoziyu/IGinX/core/target/iginx-core-0.8.0-SNAPSHOT/udf_funcs/python_scripts/Unsupervised_Deep_Learning_of_Incompressible_Fluid_Dynamics/Logger/{}/{}/states/{}.state'.format(self.name,datetime,index)
 		state = torch.load(path)
 		
 		if type(model) is not list:

@@ -6,13 +6,13 @@ from PIL import Image
 # These images were not taken into account during training to test the generalization performance of our models.
 
 #yourpath
-cyber_truck = (torch.mean(torch.tensor(np.asarray(Image.open('/Users/IGinX/core/target/iginx-core-0.8.0-SNAPSHOT/udf_funcs/python_scripts/Unsupervised_Deep_Learning_of_Incompressible_Fluid_Dynamics/imgs/cyber.png'))).float(),dim=2)<100).float()
-fish = (torch.mean(torch.tensor(np.asarray(Image.open('/Users/IGinX/core/target/iginx-core-0.8.0-SNAPSHOT/udf_funcs/python_scripts/Unsupervised_Deep_Learning_of_Incompressible_Fluid_Dynamics/imgs/fish.png'))).float(),dim=2)<100).float()
-smiley = (torch.mean(torch.tensor(np.asarray(Image.open('/Users/IGinX/core/target/iginx-core-0.8.0-SNAPSHOT/udf_funcs/python_scripts/Unsupervised_Deep_Learning_of_Incompressible_Fluid_Dynamics/imgs/smiley.png'))).float(),dim=2)<100).float()
-wing = (torch.mean(torch.tensor(np.asarray(Image.open('/Users/IGinX/core/target/iginx-core-0.8.0-SNAPSHOT/udf_funcs/python_scripts/Unsupervised_Deep_Learning_of_Incompressible_Fluid_Dynamics/imgs/wing_profile.png'))).float(),dim=2)<100).float()
-background1 = (torch.mean(torch.tensor(np.asarray(Image.open('/Users/IGinX/core/target/iginx-core-0.8.0-SNAPSHOT/udf_funcs/python_scripts/Unsupervised_Deep_Learning_of_Incompressible_Fluid_Dynamics/imgs/background1.png'))).float(),dim=2)<100).float()
-background2 = (torch.mean(torch.tensor(np.asarray(Image.open('/Users/IGinX/core/target/iginx-core-0.8.0-SNAPSHOT/udf_funcs/python_scripts/Unsupervised_Deep_Learning_of_Incompressible_Fluid_Dynamics/imgs/background2.png'))).float(),dim=2)<100).float()
-background3 = (torch.mean(torch.tensor(np.asarray(Image.open('/Users/IGinX/core/target/iginx-core-0.8.0-SNAPSHOT/udf_funcs/python_scripts/Unsupervised_Deep_Learning_of_Incompressible_Fluid_Dynamics/imgs/background3.png'))).float(),dim=2)<100).float()
+cyber_truck = (torch.mean(torch.tensor(np.asarray(Image.open('/Users/zhaoziyu/IGinX/core/target/iginx-core-0.8.0-SNAPSHOT/udf_funcs/python_scripts/Unsupervised_Deep_Learning_of_Incompressible_Fluid_Dynamics/imgs/cyber.png'))).float(),dim=2)<100).float()
+fish = (torch.mean(torch.tensor(np.asarray(Image.open('/Users/zhaoziyu/IGinX/core/target/iginx-core-0.8.0-SNAPSHOT/udf_funcs/python_scripts/Unsupervised_Deep_Learning_of_Incompressible_Fluid_Dynamics/imgs/fish.png'))).float(),dim=2)<100).float()
+smiley = (torch.mean(torch.tensor(np.asarray(Image.open('/Users/zhaoziyu/IGinX/core/target/iginx-core-0.8.0-SNAPSHOT/udf_funcs/python_scripts/Unsupervised_Deep_Learning_of_Incompressible_Fluid_Dynamics/imgs/smiley.png'))).float(),dim=2)<100).float()
+wing = (torch.mean(torch.tensor(np.asarray(Image.open('/Users/zhaoziyu/IGinX/core/target/iginx-core-0.8.0-SNAPSHOT/udf_funcs/python_scripts/Unsupervised_Deep_Learning_of_Incompressible_Fluid_Dynamics/imgs/wing_profile.png'))).float(),dim=2)<100).float()
+background1 = (torch.mean(torch.tensor(np.asarray(Image.open('/Users/zhaoziyu/IGinX/core/target/iginx-core-0.8.0-SNAPSHOT/udf_funcs/python_scripts/Unsupervised_Deep_Learning_of_Incompressible_Fluid_Dynamics/imgs/background1.png'))).float(),dim=2)<100).float()
+background2 = (torch.mean(torch.tensor(np.asarray(Image.open('/Users/zhaoziyu/IGinX/core/target/iginx-core-0.8.0-SNAPSHOT/udf_funcs/python_scripts/Unsupervised_Deep_Learning_of_Incompressible_Fluid_Dynamics/imgs/background2.png'))).float(),dim=2)<100).float()
+background3 = (torch.mean(torch.tensor(np.asarray(Image.open('/Users/zhaoziyu/IGinX/core/target/iginx-core-0.8.0-SNAPSHOT/udf_funcs/python_scripts/Unsupervised_Deep_Learning_of_Incompressible_Fluid_Dynamics/imgs/background3.png'))).float(),dim=2)<100).float()
 
 images = {"cyber":cyber_truck, "fish":fish, "smiley":smiley, "wing":wing}
 backgrounds = {"empty":background1,"cave1":background2,"cave2":background3}
